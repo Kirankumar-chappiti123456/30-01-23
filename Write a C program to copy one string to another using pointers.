@@ -19,3 +19,30 @@ int l=strlen(s);
 char (*fptr)(char [],char [],int)=strs;
 fptr(d,s,l);
 }
+
+
+usinng pointer:
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+char strs(char s[],int l)
+{
+    char *d=(char*)malloc(l*sizeof(char));
+    int i=0;
+    for(i=0;s[i]!='\0';i++)
+    {
+        d[i]=s[i];
+    }
+    printf("the string copy:");
+    for(i=0;i<l;i++)
+    {
+    printf("%c",d[i]);
+}
+}
+int main()
+{
+   char s[]="kirankumar";
+int l=strlen(s);
+char (*fptr)(char [],int)=strs;
+fptr(s,l);
+}
