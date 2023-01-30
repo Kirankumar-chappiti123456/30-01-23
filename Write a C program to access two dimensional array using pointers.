@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int r=2,c=3,i=0,j=0;
+  int *ptr=(int*)malloc((r*c)*sizeof(int));
+  for(i=0;i<r;i++)
+  {
+      for(j=0;j<c;j++)
+      {
+          scanf("%d",(ptr+i)+j);
+      }
+  }
+  for(i=0;i<r;i++)
+  {
+      for(j=0;j<c;j++)
+      {
+          printf("%d",*(ptr+i)+j);
+      }
+      printf("\n");
+  }
+ 
+}
