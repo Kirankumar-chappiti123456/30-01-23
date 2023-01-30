@@ -1,18 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    char a[]="kiran";
-    char s[]="kirankumar";
-    if(a>s)
+    char a[]="kirankumar";
+    char b[]="kirankumar";
+    char *str1,*str2;
+    str1=(char*)&a;
+    str2=(char*)&b;
+    while(*str1==*str2)
     {
-        printf("str1 is greater than str2");
+        if(*str1=='\0' || *str2=='\0')
+        
+            break;
+            str1++;
+            str2++;
+        
     }
-    else if(a<s)
-    {
-        printf("str1 is lesser than str2");
-    }
-    else
-    {
-        printf("str1 is equal to str2");
-    }
+    (*str1=='\0' && *str2=='\0')?printf("both are same "):printf("not same ");
 }
