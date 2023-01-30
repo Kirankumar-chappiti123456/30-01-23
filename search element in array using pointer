@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+    int b;
+    printf("enter the search element:");
+    scanf("%d",&b);
+    int a[]={1,2,3,4,5},i=0,*ptr=&b,c=0;
+    int n=sizeof(a)/sizeof(a[0]);
+    for(i=0;i<n;i++)
+    {
+        if(a[i]==*ptr)
+        c++;
+    }
+    (c==1)?printf("found"):printf("not found");
+}
