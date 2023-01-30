@@ -1,0 +1,70 @@
+
+ascending order:
+
+#include<stdio.h>
+int main()
+{
+   int n,i=0,j=0;
+   printf("enter the size of array:");
+   scanf("%d",&n);
+   int *ptr;
+   printf("enter the array elements:");
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",ptr+i);
+   }
+   for(i=0;i<n;i++)
+   {
+       for(j=i+1;j<n;j++)
+       {
+           if(*(ptr+i)>*(ptr+j))
+           {
+               int t=*(ptr+i);
+               *(ptr+i)=*(ptr+j);
+               *(ptr+j)=t;
+           }
+       }
+   }
+   printf("ascending order:");
+   for(i=0;i<5;i++)
+   {
+       printf("%d ",*(ptr+i));
+   }
+   }
+   
+   
+   
+   discending order:
+   
+   
+   
+   #include<stdio.h>
+int main()
+{
+   int n,i=0,j=0;
+   printf("enter the size of array:");
+   scanf("%d",&n);
+   int *ptr;
+   printf("enter the array elements:");
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",ptr+i);
+   }
+   for(i=0;i<n;i++)
+   {
+       for(j=i+1;j<n;j++)
+       {
+           if(*(ptr+i)<*(ptr+j))
+           {
+               int t=*(ptr+i);
+               *(ptr+i)=*(ptr+j);
+               *(ptr+j)=t;
+           }
+       }
+   }
+   printf("ascending order:");
+   for(i=0;i<5;i++)
+   {
+       printf("%d ",*(ptr+i));
+   }
+   }
