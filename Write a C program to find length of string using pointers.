@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+    char a[]="kirankumar";
+    int i=0,c=0;
+    for(i=0;a[i]!='\0';i++)
+    {
+        c++;
+    }
+    printf("%d",c);
+}
+
+
+using pointer in c
+
+#include<stdio.h>
+int main()
+{
+    char a[]="kirankumar";
+    char *ptr=(char*)&a;
+    int i=0,c=0;
+    for(i=0;ptr[i]!='\0';i++)
+    {
+        c++;
+    }
+    printf("%d",c);
+}
