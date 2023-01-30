@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+char strs(char *dest,char *src,int l)
+{
+    char *s=(char*)src;
+    char *d=(char*)dest;
+    int i=0;
+    for(i=0;i<l;i++)
+    {
+        d[i]=s[i];
+    }
+    printf("%s",d);
+}
+int main()
+{
+   char s[]="kirankumar";
+   char d[11];
+int l=strlen(s);
+char (*fptr)(char [],char [],int)=strs;
+fptr(d,s,l);
+}
