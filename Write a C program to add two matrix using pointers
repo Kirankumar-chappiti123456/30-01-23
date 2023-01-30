@@ -1,0 +1,139 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int r=2,c=3;
+    int a[r][c],k[r][c];
+    int b[r][c],i=0,j=0;
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d",a[i][j]);
+        }
+        printf("\n");
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d",b[i][j]);
+        }
+        printf("\n");
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            k[i][j]=a[i][j]+b[i][j];
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",k[i][j]);
+        }
+        printf("\n");
+       
+    }
+    
+    
+}
+
+
+
+using double pointer:
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int r=2,c=3;
+    int **a=(int **)malloc((r*c)*sizeof(int*));
+    int **b=(int **)malloc((r*c)*sizeof(int*));
+    int **k=(int **)malloc((r*c)*sizeof(int*)),i=0,j=0;
+    for(i=0;i<r;i++)
+    {
+        *(a+i)=(int*)malloc(c*sizeof(int));
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",*(a+i)+j);
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        *(b+i)=(int*)malloc(c*sizeof(int));
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d",*(*(a+i)+j));
+        }
+        printf("\n");
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            scanf("%d",*(b+i)+j);
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        *(k+i)=(int*)malloc(c*sizeof(int));
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d",*(*(b+i)+j));
+        }
+        printf("\n");
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            *(*(k+i)+j)=*(*(a+i)+j)+*(*(b+i)+j);
+        }
+       
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("%d ",(*(*(k+i)+j)));
+        }
+        printf("\n");
+       
+    }
+    
+    
+}
