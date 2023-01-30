@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    char a[]="kiran";
+    char s[]="kirankumar";
+    if(a>s)
+    {
+        printf("str1 is greater than str2");
+    }
+    else if(a<s)
+    {
+        printf("str1 is lesser than str2");
+    }
+    else
+    {
+        printf("str1 is equal to str2");
+    }
+}
