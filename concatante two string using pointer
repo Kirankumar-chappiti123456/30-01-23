@@ -18,3 +18,32 @@ int main()
     *ptr='\0';
     printf("%s",a);
 }
+
+
+
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("enter the size of string:");
+    scanf("%d",&n);
+    char a[n],b[n];
+    printf("enter the string one:");
+    scanf("%s",a);
+    printf("enter the string two:");
+    scanf("%s",b);
+    char *ptr=(char*)&a;
+    char *ptr1=(char*)&b;
+    while(*ptr)
+    {
+        ptr++;
+    }
+    while(*ptr1)
+    {
+        *ptr=*ptr1;
+        ptr1++;
+        ptr++;
+    }
+    *ptr='\0';
+    printf("%s",a);
+}
