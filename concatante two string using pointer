@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+    char a[]="kiran";
+    char b[]="kumar";
+    char *ptr=(char*)&a;
+    char *ptr1=(char*)&b;
+    while(*ptr)
+    {
+        ptr++;
+    }
+    while(*ptr1)
+    {
+        *ptr=*ptr1;
+        ptr1++;
+        ptr++;
+    }
+    *ptr='\0';
+    printf("%s",a);
+}
